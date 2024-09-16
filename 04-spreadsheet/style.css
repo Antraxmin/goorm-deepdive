@@ -1,0 +1,141 @@
+:root {
+    --primary-color: #1a73e8;
+    --secondary-color: #188038;
+    --background-color: #f8f9fa;
+    --text-color: #202124;
+    --border-color: #e0e0e0;
+    --header-bg-color: #ffffff;
+    --toolbar-bg-color: #f1f3f4;
+    --hover-color: #e8f0fe;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+#app-container {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: var(--header-bg-color);
+    padding: 8px 16px;
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    align-items: center;
+}
+
+#logo {
+    width: 40px;
+    height: 40px;
+    margin-right: 8px;
+}
+
+#filename {
+    font-size: 1.2em;
+    font-weight: 400;
+    color: var(--text-color);
+    border: none;
+    background: transparent;
+    padding: 4px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+#filename:hover, #filename:focus {
+    background-color: var(--hover-color);
+    outline: none;
+}
+
+#toolbar {
+    background-color: var(--toolbar-bg-color);
+    padding: 8px 16px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid var(--border-color);
+}
+
+#export-btn {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 8px 24px;
+    font-size: 14px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-weight: 500;
+}
+
+#export-btn:hover {
+    background-color: #1765cc;
+}
+
+#cell-status {
+    font-size: 14px;
+    color: var(--text-color);
+    margin-left: 16px;
+}
+
+#spreadsheet-container {
+    flex-grow: 1;
+    overflow: auto;
+    padding: 2px;
+}
+
+.cell-row {
+    display: flex;
+}
+
+.cell {
+    width: 120px;
+    height: 32px;
+    border: 1px solid var(--border-color);
+    text-align: left;
+    font-size: 14px;
+    outline: none;
+    padding: 4px 8px;
+    transition: all 0.1s ease;
+}
+
+.cell:focus {
+    border-color: var(--primary-color);
+    box-shadow: inset 0 0 0 2px var(--primary-color);
+}
+
+.cell.header {
+    background-color: #f8f9fa;
+    font-weight: 500;
+    text-align: center;
+    color: #5f6368;
+}
+
+.cell.header.active {
+    background-color: var(--hover-color);
+    color: var(--primary-color);
+}
+
+.cell:hover:not(.header) {
+    background-color: var(--hover-color);
+}
+
+@media (max-width: 768px) {
+    .cell {
+        width: 100px;
+        font-size: 12px;
+    }
+}
