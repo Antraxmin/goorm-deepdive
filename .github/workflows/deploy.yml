@@ -17,6 +17,7 @@ jobs:
         cp -r ./01-netflix ./deploy/netflix
         cp -r ./02-todo ./deploy/todo
         cp -r ./03-github-finder ./deploy/github-finder
+        cp -r ./04-spreadsheet ./deploy/spreadsheet
 
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v3
