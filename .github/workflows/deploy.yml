@@ -15,6 +15,7 @@ jobs:
       run: |
         mkdir -p ./deploy
         cp -r ./01-netflix ./deploy/netflix
+        cp -r ./02-todo ./deploy/todo
 
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v3
