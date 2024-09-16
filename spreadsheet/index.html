@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스프레드시트</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app-container">
+        <header>
+            <svg id="logo" viewBox="0 0 24 24">
+                <path d="M19 3H5C3.9 3 3 3.9 3 5v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 2v3H5V5h14zm0 5v9H5v-9h14z" fill="#188038"/>
+                <path d="M7 11h2v2H7v-2zm0 4h2v2H7v-2zm4-4h2v2h-2v-2zm0 4h2v2h-2v-2zm4-4h2v2h-2v-2zm0 4h2v2h-2v-2z" fill="#188038"/>
+            </svg>
+            <input type="text" id="filename" value="제목 없는 스프레드시트" />
+        </header>
+        <div id="toolbar">
+            <button id="export-btn">다운로드</button>
+            <div id="cell-status"><span></span></div>
+        </div>
+        <div id="spreadsheet-container"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
